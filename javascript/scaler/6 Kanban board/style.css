@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.toolbox-cont {
+  height: 5rem;
+  /* width: full; */
+  background-color: #4b4b4b;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.toolbox-priority-cont {
+  width: 18rem;
+  height: 3.5rem;
+  background-color: #3d3d3d;
+  margin-left: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* padding: 10px; */
+}
+
+.color-box {
+  height: 1.5rem;
+  width: 3rem;
+  /* background-color: antiquewhite; */
+  /* margin-left: 1px; */
+}
+.lightpink {
+  background-color: lightpink;
+}
+.lightgreen {
+  background-color: lightgreen;
+}
+.lightblue {
+  background-color: lightblue;
+}
+.black {
+  background-color: black;
+}
+.actions-cont {
+  height: 3.5rem;
+  width: 8rem;
+  background-color: #3d3d3d;
+  margin-left: 4rem;
+  display: flex;
+}
+.actions-cont > * {
+  display: flex;
+  width: 50%;
+  /* background-color: wheat; */
+  border: 1px solid gray;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: aliceblue;
+  cursor: pointer;
+}
+.add-btn:hover {
+  font-size: 3rem;
+  background-color: #4bb543;
+}
+
+.delete-btn:hover {
+  font-size: 3rem;
+  background-color: red;
+}
+
+.main-cont {
+  display: flex;
+  padding: 2rem;
+  /* align-items: center; */
+  /* gap: 2rem; */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ticket-cont {
+  height: 12rem;
+  width: 15rem;
+  background-color: coral;
+  margin: 10px;
+}
+
+.ticket-color {
+  height: 1rem;
+  background-color: lightpink;
+}
+
+.ticket-id {
+  height: 2rem;
+  background-color: yellow;
+}
+
+.ticket-lock {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5.5rem;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+.modal-cont {
+  height: 60vh;
+  width: 55vw;
+  display: flex;
+  /* border: 1px solid black; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textArea-cont {
+  background-color: #dfe4ea;
+  height: 100%;
+  width: 70%;
+  resize: none;
+}
+
+.priority-colors-cont {
+  background-color: #4b4b4b;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  /* gap: 6px; */
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.priority-color{
+  height: 3rem;
+  width: 5rem;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* flex-direction: row; */
+  /* gap: 4px; */
+  /* margin: auto; */
+  /* margin-top: 6px; */
+}
