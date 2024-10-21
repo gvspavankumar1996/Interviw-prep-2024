@@ -90,7 +90,7 @@ body {
 
 .ticket-color {
   height: 1rem;
-  background-color: lightpink;
+  /* background-color: lightpink; */
 }
 
 .ticket-id {
@@ -108,12 +108,13 @@ body {
 .modal-cont {
   height: 60vh;
   width: 55vw;
-  display: flex;
+  /* display: flex; */
   /* border: 1px solid black; */
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: none;
 }
 
 .textArea-cont {
@@ -121,6 +122,7 @@ body {
   height: 100%;
   width: 70%;
   resize: none;
+  font-size: 2rem;
 }
 
 .priority-colors-cont {
@@ -136,10 +138,8 @@ body {
 .priority-color{
   height: 3rem;
   width: 5rem;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* flex-direction: row; */
-  /* gap: 4px; */
-  /* margin: auto; */
-  /* margin-top: 6px; */
+}
+
+.active{
+  border: 5px solid lightsalmon
 }
