@@ -1,0 +1,17 @@
+1) JS - scaler
+2) React - js yatra
+3) Next js  - udemy
+4) HTML CSS - scaler
+5) Node JS - Scaler
+6) TypeScript- https://www.youtube.com/watch?v=30LWjhZzg50 / https://www.youtube.com/watch?v=zeCDuo74uzA&list=PLSDeUiTMfxW6VChKWb26Z_mPR4f6fAmMV&index=7
+7) react with typescript : https://www.udemy.com/course/react-typescript-the-practical-guide/?couponCode=MTST7102224B2
+8) Testing : Namste JS
+9) Complete interview prep: https://rpy.club/course/eqaGR0ZwIs
+10) FE machine coding: https://www.youtube.com/@FrontendAman / https://www.youtube.com/watch?v=v_fwMoTVmqw&list=PLe3J6mZBq1xUs529Z-IHiCix4KBm0uLp1 / https://www.youtube.com/watch?v=ZrMO0bCGwFg&list=PLKhlp2qtUcSYQojD5G-ElgHezoCyq2Hgo
+11)DSA - https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/?couponCode=MTST7102224B2 / GFG
+12)FE System design - https://namastedev.com/learn/namaste-frontend-system-design
+13)Mock interviews(chakde interviews) - https://www.youtube.com/watch?v=uhtmTe26rqo&list=PL4CFloQ4GGWIXCJJHwT6FPb5yVZcybuQW
+14) projects : https://www.codewithantonio.com/
+15) Unique FE interview questions(devtools tech) - https://www.youtube.com/watch?v=wkG4dYmmO-A&list=PL4ruoTJ8LTT-HHeB78_Lf4otn2EcNtR_7
+16) docker : js cafe docker yatra
+
