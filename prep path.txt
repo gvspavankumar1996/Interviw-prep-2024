@@ -6,7 +6,7 @@
 6) TypeScript- https://www.youtube.com/watch?v=30LWjhZzg50 / https://www.youtube.com/watch?v=zeCDuo74uzA&list=PLSDeUiTMfxW6VChKWb26Z_mPR4f6fAmMV&index=7
 7) react with typescript : https://www.udemy.com/course/react-typescript-the-practical-guide/?couponCode=MTST7102224B2
 8) Testing : Namste JS
-9) Complete interview prep: https://rpy.club/course/eqaGR0ZwIs
+9) Complete interview prep: https://rpy.club/course/eqaGR0ZwIs  / namste JS
 10) FE machine coding: https://www.youtube.com/@FrontendAman / https://www.youtube.com/watch?v=v_fwMoTVmqw&list=PLe3J6mZBq1xUs529Z-IHiCix4KBm0uLp1 / https://www.youtube.com/watch?v=ZrMO0bCGwFg&list=PLKhlp2qtUcSYQojD5G-ElgHezoCyq2Hgo
 11)DSA - https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/?couponCode=MTST7102224B2 / GFG
 12)FE System design - https://namastedev.com/learn/namaste-frontend-system-design
