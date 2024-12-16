@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is in browser</h1>
+
+    <script>
+      // const obj={
+      //     name:"suman",
+      //     age:60,
+      //     getThis: function(){
+      //         return this;
+      //     }
+
+      // }
+      // console.log("1:",obj.getThis());
+      // const getThisFn = obj.getThis;
+      // console.log("2:",getThisFn());
+
+      // const obj2={
+      //     name:"madhu",
+      //     age:22,
+      //     getThis: obj.getThis
+
+      // }
+      // console.log("3:",obj2.getThis());
+
+      // const obj3={
+      //     name:"bandu",
+      //     age:22,
+      //     getThis: obj2.getThis
+
+      // }
+      // console.log("4:",obj3.getThis());
+
+      // const obj4={
+      //     name:"sadna",
+      //     age:23,
+      //     getThis: obj2.getThis
+
+      // }
+
+      class Car {
+        constructor(color, model, price) {
+          this.color = color;
+          this.model = model;
+          this.price = price;
+          this.getTotatlPrice = function (tax) {
+            return tax + price;
+          };
+        }
+      }
+      //   function Car(color, model, price) {
+      //     this.color = color;
+      //     this.model = model;
+      //     this.price = price;
+
+      //     this.getTotatlPrice = function (tax) {
+      //       return tax + price;
+      //     };
+      //   }
+
+      const swift = new Car("red", "2022", 554000);
+      //   console.log(swift, "swift");
+      //   console.log(swift.getTotatlPrice(250000), "swift.getTotatlPrice(250000)");
+
+      function Animal(name) {
+        this.name = name;
+      }
+
+      Animal.prototype.speak = function () {
+        return `${this.name} bhao bhao`;
+      };
+      Animal.prototype.eat = function () {
+        return `${this.name} eat`;
+      };
+
+      function Dog(breed, name) {
+        Animal.call(this, name);
+        this.breed = breed;
+      }
+      Dog.prototype.speak=function(){
+        return `${this.name} meow meow`;
+      }
+      Dog.prototype.drink=function(){
+        return `${this.name} drink`;
+      }
+      Dog.prototype = {...Animal.prototype,...Dog.prototype}
+      const Dog1 = new Dog("x", "pappu");
+      Dog1.name="pavan"
+      console.log(Dog1, "fff");
+      console.log(Dog1.speak(), "fff");
+      console.log(Dog1.eat(), "fff");
+      console.log(Dog1.drink(), "fff");
+    </script>
+  </body>
+</html>

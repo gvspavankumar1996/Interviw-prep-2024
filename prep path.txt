@@ -15,3 +15,14 @@
 15) Unique FE interview questions(devtools tech) - https://www.youtube.com/watch?v=wkG4dYmmO-A&list=PL4ruoTJ8LTT-HHeB78_Lf4otn2EcNtR_7
 16) docker : js cafe docker yatra
 
+
+
+JS topics:-
+1)event prop, bubbling, event delegation
+2) async/defer , debounce , throttling
+3) polyfills hoc, call apply bind, promises
+4) closures and applications
+5) deep copy shallow copy
+6) module pattern
+
+
