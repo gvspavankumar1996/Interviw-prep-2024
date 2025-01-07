@@ -1,0 +1,7 @@
+Raybitz round 1
+1) life cycles in React
+2) if state is updated and dom is not what could be the errors
+3) how does react update the dom
+4) if I need to use classname and Id in React to update the dom how to do that
+5) What does a ref return in React
+6) Create a todolist

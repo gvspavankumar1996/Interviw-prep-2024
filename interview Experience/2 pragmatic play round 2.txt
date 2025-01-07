@@ -1,0 +1,8 @@
+Pragmatic round 2
+1)Redux toolkit implementation 
+2)Redux toolkit vs saga 
+3) usefetch custom hook with load state 
+
+https://codesandbox.io/p/sandbox/cool-satoshi-lzvf7g?file=%2Fsrc%2FApp.js%3A12%2C1-16%2C10
+
+https://codesandbox.io/p/sandbox/cranky-sound-673ynt
