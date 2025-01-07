@@ -1,0 +1,91 @@
+Pragmatic play interview experience:
+1) promise.any polyfill
+2) memoization Polyfill 
+3) debounce/ throttle
+4) "abbcd* first character which in non repetitive 
+5) how do you improve react app performance
+6)react design patterns
+7) react hoc pattern use Case
+
+
+1) // for (var i=0; i<5; i++) {  
+//     function printvalue(i){
+//  setTimeout(()=>{console.log(i)}, i*1000);  
+//         }
+//     printvalue(i)
+// }
+---------------------------------------
+2) // const promise1 = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+        
+//     },3000)
+    
+//     resolve("promise1")
+// })
+// const promise2 = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+        
+//     },2000)
+    
+//     resolve("promise1")
+// })
+// Promise.prototype.myPromiseAny = function(promiseArray){
+//      return  new Promise((resolve,reject)=>{
+//         for(let j=0, j<promiseArray.length;j++){
+//             promiseArray[j].then((data)=>{
+//                 resolve(data)
+//             })
+//         }
+//     })
+    
+// }
+// const promiseValue = Promise.myPromiseAny([promise1,promise2]).then((data)=>{
+//     console.log(data)
+// })
+
+----------------------------------------------------------
+// Write a function that takes a string as input and returns the first non-repeated
+// character in the string. If there are no non-repeated characters, return null.
+// "abacddce" → “b” "acacddcb" → “b” "abbbb" → a "abcdef" → a “abab” → null
+
+function nonRepeatedFirstChar(str) {
+  const occ = {};
+  let result = [];
+  for (let i = 0; i < str.length; i++) {
+    if (occ[str[i]]) {
+      occ[str[i]] = occ[str[i]] + 1;
+    } else {
+      occ[str[i]] = 1;
+    }
+  }
+
+  Object.keys(occ).map((char) => {
+    // console.log(char, occ[char], occ[char] === 1);
+    if (occ[char] === 1) {
+      result = [...result, char];
+    }
+  });
+  return result[0] || null;
+}
+
+console.log(nonRepeatedFirstChar("abab"));
+
+------------------------------------------------------
+
+// const cache = {};
+// function sum(first, second) {
+//   const args = JSON.stringify(arguments);
+//   if (cache[args]) {
+//     return cache[args];
+//   } else {
+//     console.log("calculating ");
+//     const result = first + second;
+//     cache[args] = result;
+//     return result;
+//   }
+// }
+
+//   console.log(sum(2, 3));
+//   console.log(sum(2, 3));
+
+
