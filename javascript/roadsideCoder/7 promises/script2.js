@@ -300,6 +300,13 @@ function shareTheVideo(share, cb) {
 //     console.log("Error", data.message);
 //   });
 
+
+
+
+
+
+
+
 //success, Defeat, error, error caught, success:test
 
 // ----------------------------------------------------------------------------
