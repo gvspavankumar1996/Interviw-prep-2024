@@ -1,63 +1,28 @@
-const obj = {
-  name: "pavan",
-};
+var obj = { name: "pavan" };
 
-function printUserDetails(age, job) {
-  console.log(`${this.name}-${age}-${job}`);
+function explicitBinded(a, b) {
+  console.log(`${this.name} is ${a} an his age is ${b}`);
 }
 
-// console.log(printUserDetails.apply(obj,[23,"tester"]))
-
-// const bind = printUserDetails.bind(obj)
-
-// console.log(bind("23","tester"))
-// console.log(bind("25","obj"))
-
-// -------------------------------------------------------------
-// call polyfill
-
-let car = {
-  color: "red",
-  company: "ferarri",
-};
-
-function purchaseCar(currency, price) {
-  // console.log(currency)
-  console.log(`${this.color}-${this.company} - ${currency} - ${price}`);
-}
-
-Function.prototype.mycall = function (context = {}, ...args) {
-  if (typeof this !== "function") {
-    throw new Error("Not a functionddddd");
-  }
+Function.prototype.myCall = function (context, ...args) {
   context.fn = this;
+
   context.fn(...args);
+  delete context.fn;
 };
-
-Function.prototype.myapply = function (context = {}, args) {
-  if (typeof this !== "function") {
-    throw new Error("Not a functionddddd");
-  }
+Function.prototype.myApply = function (context, args) {
   context.fn = this;
+
   context.fn(...args);
+  delete context.fn;
 };
-Function.prototype.mybind = function (context = {}, ...args) {
-  //   console.log(arguments);
-  if (typeof this !== "function") {
-    throw new Error("Not a functionddddd");
-  }
+Function.prototype.myBind = function (context, args) {
   context.fn = this;
 
-  return function (...newArgs) {
-    return context.fn(...args, ...newArgs);
-  };
+  context.fn(...args);
+  delete context.fn;
 };
 
-// purchaseCar.mycall(car,"$","2000")
-
-// purchaseCar.myapply(car,["$","2000"])
-
-// const binded = purchaseCar.bind(car, "$");
-
-// binded("2000");
-// binded("5", 23);
+console.log(explicitBinded.myCall(obj, "pavan", "23"));
+console.log(explicitBinded.myApply(obj, "pavan", "23"));
+const binded = explicitBinded.myBind(obj, "pavan", "23");

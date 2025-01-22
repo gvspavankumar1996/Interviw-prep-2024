@@ -1,0 +1,9 @@
+1) what did I like about Vue js
+2) how to Improve Next js performance
+3) Docker what is it
+4) use Material UI card to show products
+5) explain event loop
+6)explain difference between let vs const vs var
+7) why should we go for React instead of javascript
+8) I react more performant
+9) difference between bootstrap and material UI

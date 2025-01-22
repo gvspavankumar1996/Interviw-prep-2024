@@ -1,0 +1,21 @@
+1) psedo classes
+2) custom html elements
+3) data-*
+4) html validations
+5)srcset attribute in html image
+6)if two components need data and there is race kinda condition how will you handle
+7)how to reduce bundle size of the application
+8)what are the disadvantages of inline functions
+9)use strict use case
+10)git merge and git rebase 
+11)Hoc and its use cases 
+12)css vairables
+13) api version how do you handle
+14) redux performance affect on app
+16) handle multiple api calls
+17) cloud
+18) git branching strategy
+
+
+dsa :_
+non repeating substring max length;

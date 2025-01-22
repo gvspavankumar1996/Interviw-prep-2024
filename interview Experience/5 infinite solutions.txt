@@ -1,0 +1,70 @@
+1) Es6 standards
+2) why promises have higher pririty over callbacks
+3) callbacks vs promises
+4) dependency injection
+5) ways to improve performance of vanilla js application
+6) web sockets
+7) use layout effect
+7) Hoc and is alert being used in a component is Hoc
+8) render props
+9) routing details
+10) what is technical notes
+11) as a lead how will you plan a sprint
+12 ) if you gave unit test coverage and sprint task together which will you prioritize
+13) promise and then same ?
+14) Next js page routing in folder if I have three more folders will all have layout.js common
+15) error boundaries
+
+
+
+// let arr  = [1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1,  0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+//4
+
+
+const maxrepeatCount =(arr)=>{
+  let count=0;
+  let tempCount=1;
+  let currentDigit=arr[0]
+  // console.log(0===0)
+  for(let i=1;i<arr.length;i++){
+    // console.log(arr[i],currentDigit,tempCount)
+    if(arr[i]===currentDigit){
+      tempCount++;
+    }
+    else{
+      currentDigit= arr[i];
+      if(tempCount> count){
+        count= tempCount;
+      }
+      tempCount=1;
+    }
+    
+  }
+  if(tempCount> count){
+    count=tempCount
+  }
+  return count;
+  
+}
+//consider only 1
+console.log(maxrepeatCount([0,0,0,1,0,0,0]))
+// console.log(maxrepeatCount([1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1,  0, 0, 1, 0, 1, 0, 1,1,1,1,1,1]))
+
+
+
+------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

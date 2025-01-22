@@ -1,0 +1,47 @@
+
+1) what is React
+2) what is redux
+
+
+
+
+
+
+
+// "abcabcbb" ==> abc
+
+
+
+function findUniqueSubstring(str){
+  let result=""
+  let currentSubstring =""
+  let temp={}
+  
+  for(let i=0; i<str.length;i++){
+    // console.log(temp,"temp")
+    if(temp[str[i]]){
+      if(currentSubstring.length>result.length){
+        // console.log(currentSubstring)
+        result=currentSubstring;
+        currentSubstring="";
+        temp={}
+      }
+    }
+    else{
+      temp[str[i]]=true;
+      currentSubstring=currentSubstring+ str[i]
+    }
+  }
+  return result;
+  
+}
+
+// a b c a b c b b
+
+console.log(findUniqueSubstring("abcabcbb"))
+
+_____________________________________________
+https://codesandbox.io/p/sandbox/affectionate-taussig-jd83c9?file=%2Fsrc%2FApp.js%3A22%2C26
+add to cart and quantity functionality
+
+

@@ -1,0 +1,33 @@
+1)how does react handle click events
+2)learn about synthetic events
+3) use cases of next js api 
+
+// [2,6,9,10,34] ==> 10
+
+const findSecondLargest =(arr)=>{
+    let largest = arr[0];
+    let secondLargest = arr[0]
+  for(let i=0; i<arr.length;i++){
+    
+    console.log(largest,secondLargest,i,arr[i])
+   if( arr[i]>largest){
+      secondLargest= largest;
+      largest=arr[i];
+    }
+   else if(arr[i]>secondLargest && arr[i]<largest){
+      secondLargest= arr[i]
+    }
+  }
+  return secondLargest
+  
+}
+
+// 1==> l= 2  sl= 2
+// 2==> l=6   sl= 2 
+// 3==> l=9   sl=6 
+// 4==> l=10   sl = 9
+// 5==> l=34   sl=10
+
+
+
+console.log(findSecondLargest([2,6,9,10,34]))

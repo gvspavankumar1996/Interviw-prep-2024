@@ -9,32 +9,37 @@ import UseImperativeHandle from "./components/6UseImperativeHandle";
 import Counter from "./components/7CountercustomComponent";
 import UseWindowSizeComponent from "./components/8UseWindowSize";
 import UseFetchComponent from "./components/9useFetch";
+import ShoppingCart from "./components/11_ecommerceCart";
+import TypeAhead from "./components/12_typeahead";
 // import Counter from './components/Counter'
 
 const App = () => {
   return (
     <div className="container">
-    <div className="hello">
-      {/* useEffect polyfill */}
-      {/* <Counter/> */}
+      <div className="hello">
+        {/* useEffect polyfill */}
+        {/* <Counter/> */}
 
-      {/* {use ref} */}
-      {/* <UseRef/> */}
-      {/* {use context} */}
-      {/* <UseContextHook/> */}
+        {/* {use ref} */}
+        {/* <UseRef/> */}
+        {/* {use context} */}
+        {/* <UseContextHook/> */}
 
-      {/* dark light machine coding */}
-      {/* <DarkLightMachineCoding/> */}
+        {/* dark light machine coding */}
+        {/* <DarkLightMachineCoding/> */}
 
-      {/* usereducer */}
-      {/* <Usereducer /> */}
-      {/* UseImperativeHandle */}
-      {/* <UseImperativeHandle /> */}
+        {/* usereducer */}
+        {/* <Usereducer /> */}
+        {/* UseImperativeHandle */}
+        {/* <UseImperativeHandle /> */}
 
-      {/* <Counter/> */}
-      {/* <UseWindowSizeComponent/> */}
-      <UseFetchComponent/>
-    </div>
+        {/* <Counter/> */}
+        {/* <UseWindowSizeComponent/> */}
+        {/* <UseFetchComponent/> */}
+
+        {/* <ShoppingCart /> */}
+        <TypeAhead />
+      </div>
     </div>
   );
 };

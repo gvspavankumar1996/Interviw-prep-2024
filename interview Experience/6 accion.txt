@@ -1,0 +1,3 @@
+13) promise and then same ?
+14) Next js page routing in folder if I have three more folders will all have layout.js common
+15) error boundaries

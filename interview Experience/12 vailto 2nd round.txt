@@ -1,0 +1,5 @@
+1)Dynamic form handling
+
+2) create server and client component, server is rendering client. client function ping() should be triggered when server button onCLick event triggeres.
+
+3) Learn more on next js

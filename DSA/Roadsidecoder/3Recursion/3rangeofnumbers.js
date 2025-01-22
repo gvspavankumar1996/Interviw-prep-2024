@@ -5,7 +5,7 @@ function rangeOfNumbers(startNum, endNum) {
     return [];
   } else {
     const numbers = rangeOfNumbers(startNum, endNum - 1);
-    console.log(numbers,endNum)
+    // console.log(numbers,endNum)
     numbers.push(endNum);
     return numbers;
   }

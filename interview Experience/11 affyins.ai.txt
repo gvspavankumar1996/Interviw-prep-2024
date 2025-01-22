@@ -1,0 +1,5 @@
+1)microfrontend explaination
+2) project architectures I have worked on
+3) achievements or complx components I have worked on
+4) debounce
+5) Data structure and response structure for file explorer along with algorithm to use
