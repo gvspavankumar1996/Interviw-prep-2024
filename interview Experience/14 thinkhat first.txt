@@ -1,0 +1,163 @@
+1) why virtual dom is light weight
+2) how to make sure object values is not changed
+3) what is prototype in a object
+4) what is difference between callbacks, promises and async and await
+5) what is worker thread
+6) what happened when you search a domain... dns server etc
+7) how to debug memory leaks in react application
+8) how garbje collecting works in closure
+
+
+
+
+----------------------------------------------------------
+
+
+1) // Given an m x n 2D binary grid grid which represents a map of '1's (land) 
+// and '0's (water), return the number of islands.
+// An island is surrounded by water and is formed by connecting
+// adjacent lands horizontally or vertically. You may assume all four
+// edges of the grid are all surrounded by water.
+
+ 
+
+// Example 1:
+
+// Input: grid = [
+//   ["1","1","1","1","0"],
+//   ["1","1","0","1","0"],
+//   ["1","1","0","0","0"],
+//   ["0","0","0","0","0"]
+// ]
+// Output: 1
+
+// Input: grid = [
+//   ["1","1","0","0","0"],
+//   ["1","1","0","0","0"],
+//   ["0","0","1","0","0"],
+//   ["0","0","0","1","1"]
+// ]
+// Output: 3
+
+
+
+------------------------------------------------------------------
+
+
+
+
+
+
+
+
+2) https://docs.google.com/document/d/1dqz8xBzm9eR7boxyIrOPMPQQMdLye8wdCNW1NWus7Hc/edit?tab=t.0
+
+create react.render functionality
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Html</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+
+        // React Component
+        // const App = ({ name, children }) => {
+        // const [fname, setFname] = React.useState(name)
+        // const [count, setCount] = React.useState(0)
+
+        // return <div class="heading-container">
+        //     This is
+        //     <h1 key="10" id="heading">TKH</h1>
+        //     <h2 id="heading">is Awesome!!</h2>
+        //     <input type="text" value={fname} onchange={e => setFname(e.target.value)} />
+        //     <button onclick={() => setCount(count + 1)}>Click</button>
+        //     {count}
+        //     <>
+        //         <div>
+        //             React
+        //         </div>
+        //         <div>
+        //             Fragment
+        //         </div>
+        //     </>
+        //     {children ? children : ""}
+        // </div>
+        // }
+
+        // A Dom Object created by this React component :
+        const DomOfApp = {
+            "type": "div",
+            "props": {
+                "class": "heading-container",
+                "children": {
+                    "0": "This is",
+                    "1": {
+                        "type": "h1",
+                        "props": {
+                            "key": "10",
+                            "id": "heading",
+                            "children": "Th"
+                        }
+                    },
+                    "2": {
+                        "type": "h2",
+                        "props": {
+                            "id": "heading",
+                            "children": "is Awesome!!"
+                        }
+                    },
+                    "3": {
+                        "type": "input",
+                        "props": {
+                            "type": "text",
+                            "value": "Surya"
+                        }
+                    },
+                    "4": {
+                        "type": "button",
+                        "props": {
+                            "children": "Click"
+                        }
+                    },
+                    "5": 0,
+                    "6": {
+                        "props": {
+                            "children": {
+                                "0": {
+                                    "type": "div",
+                                    "props": {
+                                        "children": "React"
+                                    }
+                                },
+                                "1": {
+                                    "type": "div",
+                                    "props": {
+                                        "children": "Fragment"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "7": ""
+                }
+            }
+        }
+        // Create a render function which takes this object and renders it to the dom.
+        renderToDom(DomOfApp, document.getElementById("root"))
+
+        function renderToDom(DomOfApp, domNode) {
+
+        }
+    </script>
+</body>
+
+</html>
+
+_---------------------------------------------------------------

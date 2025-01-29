@@ -1,0 +1,5 @@
+1) how is your deployment process
+2) how can some project access a private npm ?
+3)how did you utilize Next js API
+
+4) create json file in public folder and fetch the file in app.js and show data.

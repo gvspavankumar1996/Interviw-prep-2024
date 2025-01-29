@@ -1,0 +1,181 @@
+1) what is extends and OMIT
+2) why redux toolkit over redux saga
+3) have you used react testing library
+4) difference between extends and Enum and interface
+5) difference between arrow and normal functions
+6) anonymous functions
+7) which is easier for debugging arrow or normal function
+8)RTK query 
+
+
+
+
+
+
+
+------------------------------------------------------
+
+3) const products = [
+    {
+        id: 1,
+        name: "Laptop",
+        category: "Electronics",
+        price: 999.99,
+        stock: 50,
+        ratings: [4.5, 5, 4, 4.8],
+        features: {
+            processor: "Intel i7",
+            ram: "16GB",
+            storage: "512GB SSD"
+        }
+    },
+    {
+        id: 2,
+        name: "Smartphone",
+        category: "Electronics",
+        price: 699.99,
+        stock: 100,
+        ratings: [4.7, 4.8, 5, 4.9],
+        features: {
+            processor: "Snapdragon 888",
+            ram: "8GB",
+            storage: "128GB"
+        }
+    },
+    {
+        id: 3,
+        name: "Headphones",
+        category: "Accessories",
+        price: 199.99,
+        stock: 200,
+        ratings: [4.2, 4.5, 4.0, 4.8],
+        features: {
+            type: "Over-ear",
+            noiseCancellation: true,
+            batteryLife: "30 hours"
+        }
+    },
+    {
+        id: 4,
+        name: "Smartwatch",
+        category: "Wearables",
+        price: 299.99,
+        stock: 75,
+        ratings: [4.6, 4.7, 4.5, 4.8],
+        features: {
+            display: "AMOLED",
+            waterResistance: "50m",
+            batteryLife: "7 days"
+        }
+    },
+    {
+        id: 5,
+        name: "Bluetooth Speaker",
+        category: "Accessories",
+        price: 89.99,
+        stock: 150,
+        ratings: [4.3, 4.4, 4.1, 4.5],
+        features: {
+            batteryLife: "12 hours",
+            waterproof: true,
+            connectivity: "Bluetooth 5.0"
+        }
+    },
+    {
+        id: 6,
+        name: "Gaming Mouse",
+        category: "Accessories",
+        price: 49.99,
+        stock: 300,
+        ratings: [4.8, 4.9, 4.7, 5.0],
+        features: {
+            dpi: "16000",
+            programmableButtons: 6,
+            connectivity: "Wired/Wireless"
+        }
+    },
+    {
+        id: 7,
+        name: "4K Monitor",
+        category: "Electronics",
+        price: 399.99,
+        stock: 40,
+        ratings: [4.6, 4.5, 4.7, 4.8],
+        features: {
+            size: "27 inches",
+            refreshRate: "144Hz",
+            panelType: "IPS"
+        }
+    },
+    {
+        id: 8,
+        name: "Wireless Charger",
+        category: "Accessories",
+        price: 29.99,
+        stock: 250,
+        ratings: [4.4, 4.5, 4.3, 4.6],
+        features: {
+            compatibility: "Qi-enabled devices",
+            output: "10W",
+            design: "Slim and portable"
+        }
+    },
+    {
+        id: 9,
+        name: "Action Camera",
+        category: "Electronics",
+        price: 299.99,
+        stock: 60,
+        ratings: [4.5, 4.6, 4.7, 4.8],
+        features: {
+            resolution: "4K",
+            waterproof: true,
+            batteryLife: "2 hours"
+        }
+    },
+    {
+        id: 10,
+        name: "Laptop Stand",
+        category: "Accessories",
+        price: 39.99,
+        stock: 120,
+        ratings: [4.2, 4.3, 4.4, 4.5],
+        features: {
+            material: "Aluminum",
+            adjustableHeight: true,
+            portability: "Foldable"
+        }
+    }
+];
+
+// total stock worth
+
+let totalPrice = 0;
+// for(prod of products){
+//   totalPrice = totalPrice + (prod.price * prod.stock );
+// }
+// console.log(totalPrice)
+
+const groupedProductPrices={
+  total:0,
+ 
+  
+}
+// const {categories} = groupedProductPrices;
+
+for(prod of products){
+ groupedProductPrices.total = groupedProductPrices.total + (prod.price * prod.stock );
+  // console.log(prod)
+ 
+    groupedProductPrices[prod.category]=groupedProductPrices[prod.category] ||0 + (prod.price * prod.stock )
+
+    
+ 
+  
+}
+console.log(groupedProductPrices)
+
+
+// total worth of products grouped by category {Electronics: $$$, Wearables: $$$, Accessories: $$$ }
+
+

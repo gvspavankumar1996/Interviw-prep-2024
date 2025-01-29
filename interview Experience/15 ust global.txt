@@ -1,0 +1,42 @@
+1) limitation of microfrontend
+2) css frameworks I have worked on
+3) what is semantic html
+4) server side rendering
+
+DSA:_
+// let str = "abbbcabcdefef" 
+// You have to find the length of the longest substring from the 
+// string without repeating any character. 
+// In other words, find the length of the longest substring with unique characters?
+
+  const longestUniqueSubString=(stringValue)=>{
+    let result =0;
+    let tempResult=0;
+    let isVairablePresent={}
+    
+    for(str of stringValue){
+      console.log(str,tempResult,result,isVairablePresent)
+      if(isVairablePresent[str]){
+        if(tempResult>result){
+          result=tempResult
+        }
+        isVairablePresent={};
+        tempResult=0;
+      }
+      else{
+        tempResult++;
+        isVairablePresent[str]=true;
+      }
+      }
+      
+      if(tempResult>result){
+        result=tempResult
+      }
+      
+      return result;
+    
+  }
+
+
+console.log(longestUniqueSubString("abbbcabcdefef"))
+

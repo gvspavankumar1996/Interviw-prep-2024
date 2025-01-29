@@ -1,0 +1,152 @@
+1) ---
+https://stackblitz.com/edit/react-ts-u5ntsamy?file=DisplayTree.tsx,App.tsx,Instructions.md
+## PART 1 - Tree Component
+
+1. Create a Tree component (initial tree sample data present in App component)
+
+2. If a node has child node(s) & is not expanded, display a `+` button in front of the node label. On click, the node needs to be expanded to display child node(s) & button should be changed to `-`
+
+3. If a node is already expanded, display a `-` button along with node label, and on click hide the child node(s) & change the button to `+`
+
+4. When a node id selected, add some background color / styles to highlight current selection
+---
+
+data:
+  const treeInitialData = [
+    {
+      id: 1,
+      label: 'Node 1',
+      children: [
+        {
+          id: 2,
+          label: 'Node 1.1',
+          children: [
+            { id: 3, label: 'Node 1.1.1' },
+            { id: 4, label: 'Node 1.1.2' },
+          ],
+        },
+        {
+          id: 5,
+          label: 'Node 1.2',
+        },
+      ],
+    },
+    {
+      id: 6,
+      label: 'Node 2',
+      children: [
+        {
+          id: 7,
+          label: 'Node 2.1',
+        },
+      ],
+    },
+  ];
+
+
+---------------------------------------------------------------
+App.js
+import React, { useState } from 'react';
+import './style.css';
+import DisplayTree from './DisplayTree';
+
+function App() {
+  const [expandedNodes, setExpandedNodes] = useState({});
+  const treeInitialData = [
+    {
+      id: 1,
+      label: 'Node 1',
+      children: [
+        {
+          id: 2,
+          label: 'Node 1.1',
+          children: [
+            { id: 3, label: 'Node 1.1.1' },
+            { id: 4, label: 'Node 1.1.2' },
+          ],
+        },
+        {
+          id: 5,
+          label: 'Node 1.2',
+        },
+      ],
+    },
+    {
+      id: 6,
+      label: 'Node 2',
+      children: [
+        {
+          id: 7,
+          label: 'Node 2.1',
+        },
+      ],
+    },
+  ];
+  const updateExpandedNode = (id) => {
+    const existingdata = { ...expandedNodes };
+    if (existingdata[id]) {
+      existingdata[id] = false;
+      setExpandedNodes(existingdata);
+    } else {
+      existingdata[id] = true;
+      setExpandedNodes(existingdata);
+    }
+    // setExpandedNodes()
+  };
+
+  return (
+    <div className="app">
+      <div className="header">Tree Component</div>
+      <div className="content">
+        <DisplayTree
+          updateExpandedNode={updateExpandedNode}
+          expandedNodes={expandedNodes}
+          data={treeInitialData}
+        />
+      </div>
+      <div className="footer"></div>
+    </div>
+  );
+}
+
+export default App;
+----------------------------------------------------------
+import React, { useEffect } from 'react';
+import './style.css';
+
+function DisplayTree({ data, updateExpandedNode, expandedNodes }) {
+  return (
+    <>
+      {data &&
+        data.length > 0 &&
+        data.map((node) => {
+          return (
+            <div>
+              <span> {node.label}</span>
+              {node.children && (
+                <span
+                  style={{ cursor: 'pointer', marginLeft: '10px' }}
+                  onClick={() => updateExpandedNode(node.id)}
+                >
+                  {expandedNodes[node?.id] ? '-' : '+'}
+                </span>
+              )}
+
+              {node?.children &&
+                node.children.length > 0 &&
+                expandedNodes[node?.id] && (
+                  <DisplayTree
+                    updateExpandedNode={updateExpandedNode}
+                    expandedNodes={expandedNodes}
+                    data={node.children}
+                  />
+                )}
+            </div>
+          );
+        })}
+    </>
+  );
+}
+
+export default DisplayTree;
+

@@ -1,0 +1,12 @@
+.box{
+  border: 1px solid lightblue;
+  width: 300px;
+  padding: 10px;
+  margin: 50px auto;
+  border-radius: 14px;
+}
+
+.box-img{
+    width: 100%;
+    border-radius: 14px;
+}

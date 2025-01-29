@@ -1,0 +1,94 @@
+1) https://codesandbox.io/p/sandbox/interview-react-forked-mx5ypf?file=%2Fsrc%2FApp.js%3A35%2C49
+	import { useState, useMemo, useRef } from "react";
+import Component from "./Component";
+import useFetch from "./use-fetch";
+import "./styles.css";
+
+// https://swapi.dev/api/people
+
+export default function App() {
+  const [count, setCount] = useState(0);
+  const tempCount = useRef(0);
+  const { data, error, loading } = useFetch("https://swapi.dev/api/people");
+  console.log(data);
+  // let count = 0;
+  // let tempCount = 0;
+  let randomArray = [1, 2, 3, 4, 5];
+  const memoizedValue = useMemo(() => randomArray, []);
+
+  const changeCounterValue = (action) => {
+    // let currentCount = count;
+    // console.log(tempCount + 1);
+    switch (action) {
+      case "add":
+        setCount((prev) => prev + 1);
+        tempCount.current++;
+        break;
+      case "subtract":
+        setCount((prev) => prev - 1);
+        tempCount.current--;
+        break;
+    }
+  };
+  console.log(tempCount.current, "tempCount");
+  return (
+    <div className="App">
+      {/* <CustomButton vairation  text onCLick  */}
+      <h4>Counter</h4>
+      <h5>{count}</h5>
+      <button onClick={() => changeCounterValue("add")}>+</button>{" "}
+      <button onClick={() => changeCounterValue("subtract")}>-</button>
+      <Component randomArray={memoizedValue} />
+    </div>
+  );
+}
+
+import React from "react";
+
+const Component = () => {
+  console.log("Component rendered");
+  return <div style={{ marginTop: "20px" }}>Component</div>;
+};
+
+export default React.memo(Component);
+
+
+---------------------------------------------------------------------
+
+2) Promise.allsettled polyfill
+
+---------------------------
+
+3)print all object values recursively
+
+const printObjectValues =(obj)=>{
+  // console.log(typeof obj)
+  if(typeof obj!=='object'){
+    console.log(obj)
+    return
+  }
+  
+   for(keys in obj){
+     if(typeof obj[keys] ==='object'){
+     return  printObjectValues(obj[keys])
+     }
+     else{
+      console.log(obj[keys])
+     }
+   }
+  
+}
+
+
+const nested ={
+ userDetails:{
+    name:"pavan",
+    age:23,
+    companies:{
+      veltris:"1",
+      mindtree:"2"
+    }
+  }
+}
+
+printObjectValues(nested)

@@ -11,6 +11,7 @@ import UseWindowSizeComponent from "./components/8UseWindowSize";
 import UseFetchComponent from "./components/9useFetch";
 import ShoppingCart from "./components/11_ecommerceCart";
 import TypeAhead from "./components/12_typeahead";
+import InfiniteScrolling from "./components/13_infiniteScrolling";
 // import Counter from './components/Counter'
 
 const App = () => {
@@ -38,7 +39,8 @@ const App = () => {
         {/* <UseFetchComponent/> */}
 
         {/* <ShoppingCart /> */}
-        <TypeAhead />
+        {/* <TypeAhead /> */}
+        <InfiniteScrolling />
       </div>
     </div>
   );
