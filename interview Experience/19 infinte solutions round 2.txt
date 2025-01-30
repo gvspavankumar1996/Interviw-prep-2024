@@ -1,0 +1,12 @@
+1) if I have used a npm package for a component in my app, what if in later stage it turns out to having vulnerabilities what will I do if its a tightly coupled code.
+2) what is csrf tokens
+3) JWT
+4) what is sso( single authentication for multiple apps like google authentication)
+5) advantages and disadvantes of using material ui / custom components
+6)what are types of browser storage
+7) If you use index db will it effect performance of you application
+8) how to make sure to design authentication in your application
+9) how to implement protected routes
+10) how to achieve inheritance in react using functional based components
+11) what is cross site scripting
+12) what is accebility
