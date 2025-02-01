@@ -1,0 +1,23 @@
+1) write context api
+
+---------------
+2) console.log(1);
+setTimeout(() => console.log(2), 0);
+Promise.resolve().then(() => console.log(3));
+console.log(4);
+
+ ----------------------------
+3)console.log(typeof NaN);
+
+console.log(NaN === NaN);
+----------------------------
+ 
+4)let arr = [10, 20, 30];
+
+arr[100] = 40;
+ 
+console.log(arr.length);
+
+console.log(arr);
+
+ 

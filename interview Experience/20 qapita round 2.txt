@@ -1,0 +1,38 @@
+1) // Convert the following promise-based function to use async/await.
+ 
+// ```javascript
+
+
+
+const fetchData= async() {
+  try{
+  const result = await fetch('https://api.example.com/data');
+  const jsonData = await result.json();
+  console.log(jsonData)
+  return jsonData
+  }
+  catch(err){
+    console.error(err);
+  }
+// return fetch('https://api.example.com/data')
+// .then(response => response.json())
+// .then(data => console.log(data))
+// .catch(err => console.error(err));
+}
+
+
+2) https://codesandbox.io/p/sandbox/inspiring-chebyshev-7ywrs6?file=%2Fsrc%2FPagination.jsx%3A18%2C44-18%2C48
+Create a React application that renders a paginated data table from a remote API. The table should support the following features:
+	1.	Server-Side Pagination: Only load the data you need for each page (e.g., 20 items per page).
+	2.	Sorting: Clickable column headers to sort data (ascending or descending).
+	3.	Filtering: Provide a text input that filters rows based on a specific field.
+	4.	Performance Optimization: Handle a large dataset efficiently (e.g., implement virtualization or lazy loading).
+	5.	Error & Loading States: Gracefully handle loading indicators and error messages from API calls.
+ 
+Task:
+	•	Build the table and its features using React components.
+	•	Use best practices (custom hooks, separation of concerns, etc.).
+	•	Demonstrate how you would structure state management (using React hooks, Redux, or another library) and manage side effects (e.g., with fetch or React Query).
+ 
+Deliverable:
+A minimal but functional React app that showcases the above features. Include any relevant code snippets or additional details (like component breakdown or file structure) to explain your approach.

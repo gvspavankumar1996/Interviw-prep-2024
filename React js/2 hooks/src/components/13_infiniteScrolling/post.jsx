@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 const Post = ({ data, setPageNo }) => {
   useEffect(() => {
+    const lastImage = document.querySelector(".img-post:last-child");
     const observer = new IntersectionObserver((param) => {
       console.log(param);
       if (param[0]?.isIntersecting) {
@@ -9,7 +10,6 @@ const Post = ({ data, setPageNo }) => {
         setPageNo((prev) => prev + 1);
       }
     });
-    const lastImage = document.querySelector(".img-post:last-child");
     if (!lastImage) {
       return;
     }

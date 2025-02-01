@@ -1,0 +1,193 @@
+// function returns a promise with dummy data
+ const studentsData = {
+
+  courses: [
+
+    { course_id: "CS101", course_name: "Introduction to Computer Science" },
+
+    { course_id: "MATH201", course_name: "Calculus II" },
+
+    { course_id: "ENG101", course_name: "English Literature" },
+
+    { course_id: "HIST201", course_name: "World History" },
+
+    { course_id: "PHYS101", course_name: "General Physics" },
+
+    { course_id: "CHEM101", course_name: "Chemistry I" }
+
+  ],
+
+  students: [
+
+    {
+
+      id: 1,
+
+      name: "John Doe",
+
+      age: 20,
+
+      gender: "Male",
+
+      courses: [
+
+        { course_id: "CS101", grade: "A" },
+
+        { course_id: "MATH201", grade: "B+" }
+
+      ]
+
+    },
+
+    {
+
+      id: 2,
+
+      name: "Jane Smith",
+
+      age: 22,
+
+      gender: "Female",
+
+      courses: [
+
+        { course_id: "ENG101", grade: "A-" },
+
+        { course_id: "HIST201", grade: "B" }
+
+      ]
+
+    },
+
+    {
+
+      id: 3,
+
+      name: "Alice Johnson",
+
+      age: 21,
+
+      gender: "Female",
+
+      courses: [
+
+        { course_id: "PHYS101", grade: "A" },
+
+        { course_id: "CHEM101", grade: "A-" }
+
+      ]
+
+    }
+
+  ],
+
+  marks_obtained: [
+
+    { student_id: 1, course_id: "CS101", marks: 85 },
+
+    { student_id: 1, course_id: "MATH201", marks: 78 },
+
+    { student_id: 2, course_id: "ENG101", marks: 88 },
+
+    { student_id: 2, course_id: "HIST201", marks: 75 },
+
+    { student_id: 3, course_id: "PHYS101", marks: 90 },
+
+    { student_id: 3, course_id: "CHEM101", marks: 87 }
+
+  ]
+
+};
+
+
+const APICall = ()=>{
+ return new Promise((resolve,reject)=>{
+   resolve(studentsData)
+ })
+  
+}
+
+
+APICall().then((res)=>{
+  console.log(res,"res")
+})
+
+
+//name, id ,coursename, marks obtained
+
+
+//show marks obtained for each student and course name 
+
+
+https://codesandbox.io/p/sandbox/xenodochial-hypatia-qkz4t3?file=%2Fsrc%2FApp.js%3A9%2C26-9%2C30
+
+------------------------------------------------------------------
+import { useEffect, useState } from "react";
+import DisplayStudentData from "./DisplayStudentData";
+// import APICall from "./studentData.js";
+import { studentsData } from "./studentData.js";
+import "./styles.css";
+
+export default function App() {
+  const [data, setData] = useState(null);
+          // {error,loading,data}    = useFecth()
+
+  const APICall = () => {
+    return new Promise((resolve, reject) => {
+      resolve(studentsData);
+    });
+  };
+  useEffect(() => {
+    APICall().then((res) => {
+      setData(res);
+    });
+  }, []);
+
+  return (
+    <div className="App">
+      <DisplayStudentData data={data} />
+    </div>
+  );
+}
+
+
+
+
+const DisplayStudentData = ({ data }) => {
+  // const [co]
+
+  const CourseNames = data?.courses?.reduce((acc, curr) => {
+    acc[curr["course_id"]] = curr["course_name"];
+    return acc;
+  }, {});
+
+  if (!data) {
+    <div>Loading...</div>;
+  }
+
+  return (
+    <div>
+      {/* <ul> */}
+      {data?.students.map((student) => {
+        return (
+          <div key={student?.id}>
+            Name: <span> {student?.name}</span> , Age:{" "}
+            <span> {student?.age}</span> , ID: <span> {student?.id}</span> ,
+            Course Name:
+            {student?.courses?.map((course) => {
+              return (
+                <span key={course.course_id}>
+                  {CourseNames[course.course_id]},
+                </span>
+              );
+            })}
+            {/* Course Name: <span> {CourseNames[student?.course_id]}</span> */}
+          </div>
+        );
+      })}
+      {/* </ul> */}
+    </div>
+  );
+};
+
+export default DisplayStudentData;
