@@ -1,0 +1,4 @@
+1) unary, first class, first order functions
+2) Promise vs Async await
+3) tailwind css vs material UI
+4) apart static typed advantages of typescript over js

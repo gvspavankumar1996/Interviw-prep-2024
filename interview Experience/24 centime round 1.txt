@@ -1,0 +1,48 @@
+1) types of data types
+2) primitive vs reference
+3) shallow vs deep copy
+4) why promises were introduced 
+5) if callback hell is problem then how nested components are not a problem
+6) ways to create deep copy
+7) if user input is there and val is updated when user types and we are using val as useEffect ependency , how ,many times useEffect is triggered.
+8) If I have a table where user does multiple actions like sorting filtering and changing columns positions and on CLick of a button need to bring him to initial state. what would be an efficient way or approach to implement this.
+
+
+https://onecompiler.com/javascript/437yjedjm
+
+const a= { 
+name: "X", 
+job:"Software Engineer", 
+manager: { 
+     name: "Y", 
+     job:"Software Manager",
+     salary: ()=> 30000  ,
+     teamMembers : ['X', 'Z', 'W', 'V' ]
+     } ,
+tasks: [101,102,"103"]
+
+}
+const deepCopy = (obj)=>{
+  const result =Array.isArray(obj)? []: {}
+  
+  for(key in obj){
+    if(typeof obj[key]!=="object"){
+      result[key]=obj[key]
+    }
+    else{
+       result[key]=  deepCopy(obj[key])
+    }
+    
+  }
+  return result;
+  
+}
+const b = deepCopy(a)
+
+// console.log(b)
+
+b.manager.job="tester"
+b.manager.teamMembers.push('B')
+
+console.log(b,"b")
+console.log(a,"a")

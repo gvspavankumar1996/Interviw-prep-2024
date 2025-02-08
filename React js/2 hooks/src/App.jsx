@@ -12,36 +12,36 @@ import UseFetchComponent from "./components/9useFetch";
 import ShoppingCart from "./components/11_ecommerceCart";
 import TypeAhead from "./components/12_typeahead";
 import InfiniteScrolling from "./components/13_infiniteScrolling";
+import Carouselfeature from "./components/14_carousel";
 // import Counter from './components/Counter'
 
 const App = () => {
   return (
     <div className="container">
-      <div className="hello">
-        {/* useEffect polyfill */}
-        {/* <Counter/> */}
+      {/* useEffect polyfill */}
+      {/* <Counter/> */}
 
-        {/* {use ref} */}
-        {/* <UseRef/> */}
-        {/* {use context} */}
-        {/* <UseContextHook/> */}
+      {/* {use ref} */}
+      {/* <UseRef/> */}
+      {/* {use context} */}
+      {/* <UseContextHook/> */}
 
-        {/* dark light machine coding */}
-        {/* <DarkLightMachineCoding/> */}
+      {/* dark light machine coding */}
+      {/* <DarkLightMachineCoding/> */}
 
-        {/* usereducer */}
-        {/* <Usereducer /> */}
-        {/* UseImperativeHandle */}
-        {/* <UseImperativeHandle /> */}
+      {/* usereducer */}
+      {/* <Usereducer /> */}
+      {/* UseImperativeHandle */}
+      {/* <UseImperativeHandle /> */}
 
-        {/* <Counter/> */}
-        {/* <UseWindowSizeComponent/> */}
-        {/* <UseFetchComponent/> */}
+      {/* <Counter/> */}
+      {/* <UseWindowSizeComponent/> */}
+      {/* <UseFetchComponent/> */}
 
-        {/* <ShoppingCart /> */}
-        {/* <TypeAhead /> */}
-        <InfiniteScrolling />
-      </div>
+      {/* <ShoppingCart /> */}
+      {/* <TypeAhead /> */}
+      {/* <InfiniteScrolling /> */}
+      <Carouselfeature />
     </div>
   );
 };

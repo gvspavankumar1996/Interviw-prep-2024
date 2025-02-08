@@ -1,0 +1,97 @@
+1️⃣ LRU Cache (Least Recently Used Cache)
+Data Structures Required:
+HashMap (Object in JS) → For O(1) lookup of key-value pairs.
+Doubly Linked List → To track the order of usage efficiently.
+Why?
+HashMap ensures fast access.
+Doubly Linked List helps in moving the least recently used element to the end in O(1) time.
+
+2️⃣ Typeahead (Autocomplete / Search Suggestions)
+Data Structures Required:
+Trie (Prefix Tree) → For efficient word searching.
+Heap (Priority Queue) → To rank search results.
+Set (or Debouncing with a Queue) → To avoid redundant API calls.
+Why?
+Trie provides fast prefix-based search (O(n) lookup).
+Heap helps in sorting top results based on frequency.
+Debouncing prevents excessive API requests.
+
+3️⃣ Nested Comments (Reddit, YouTube-style comments)
+Data Structures Required:
+Tree (Recursive Object or Adjacency List Representation)
+Map (for quick parent-child lookup)
+Why?
+Comments are hierarchical (nested structure).
+A Map helps in fast parent-child reference lookup.
+Example Tree Structure:
+
+js
+Copy
+Edit
+const comments = [
+  {
+    id: 1,
+    text: "First comment",
+    replies: [
+      {
+        id: 2,
+        text: "Reply to first comment",
+        replies: []
+      }
+    ]
+  }
+];
+
+4️⃣ File Explorer (Windows Explorer, Google Drive)
+Data Structures Required:
+Tree (N-ary Tree or Adjacency List)
+Stack (for navigation history)
+Why?
+File systems are hierarchical.
+Stack enables "Back" and "Forward" navigation efficiently.
+Example Tree Structure for a File System:
+
+js
+Copy
+Edit
+const fileSystem = {
+  name: "root",
+  type: "folder",
+  children: [
+    { name: "file1.txt", type: "file" },
+    { 
+      name: "Documents", 
+      type: "folder", 
+      children: [
+        { name: "resume.pdf", type: "file" }
+      ] 
+    }
+  ]
+};
+
+5️⃣ Dynamic Nested Tabs (Forms inside Tabs)
+Data Structures Required:
+Map or Object → To store tab data dynamically.
+Stack → To track navigation history.
+Why?
+A Map enables fast retrieval of tab data.
+Stack allows undoing actions within tabs.
+
+6️⃣ React Component Rendering Optimization (Virtualization, Infinite Scroll)
+Data Structures Required:
+Linked List (for efficient element insertion/removal)
+Binary Heap (for priority scheduling of updates)
+Sliding Window / Queue (for managing visible elements in viewport)
+Why?
+Linked List prevents unnecessary re-renders.
+Heap schedules updates based on priority.
+Queue helps in maintaining a fixed number of visible items.
+
+🔥 Final Thoughts
+For React machine coding rounds, focus on: ✅ HashMaps (for quick lookups)
+✅ Trees (for nested structures like comments, file explorer)
+✅ Stacks & Queues (for navigation, undo-redo, pagination)
+✅ Tries & Heaps (for search and ranking problems)
+✅ Linked Lists (for efficient element removal in caches)
+
+Would you like a hands-on React implementation of any of these? 🚀

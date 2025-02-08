@@ -3,11 +3,11 @@
 // function reverseString(str) {
 //   return str.split("").reverse().join("");
 // }
-function reverseString(str) {
-  if (str === "") {
-    return "";
+  function reverseString(str) {
+    if (str === "") {
+      return "";
+    }
+    return reverseString(str.substr(1)) + str.charAt(0);
   }
-  return reverseString(str.substr(1)) + str.charAt(0);
-}
 
-console.log(reverseString("hello"));
+  console.log(reverseString("hello"));

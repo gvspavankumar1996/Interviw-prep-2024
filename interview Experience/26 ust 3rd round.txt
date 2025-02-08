@@ -1,0 +1,18 @@
+1) const x ={x: 1,y:2}
+
+const y=x;
+
+y.x=5;
+
+console.log(x,y) //{ x: 5, y: 2 } { x: 5, y: 2 }
+
+
+2) why ssr?
+
+3) can we call async functions in useEffect?
+
+4) useFetch hook.
+
+5) what are generator function sand how they are different from asyn await?
+
+6) will API endpoint be visible that has been called in a ssr page in next js in browser ?

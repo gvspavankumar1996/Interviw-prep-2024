@@ -1,0 +1,77 @@
+1) Mixin React
+2) what are Protected Routes
+3) How to you manage authentication in react app
+4) where do you store JWT token in browser
+5) will session storage will be same in multiple tabs
+6) will cookies be same for all tabs
+7) how to remove cookies
+8) How to show forms in different pages
+9) 
+// var output = (function(x) {
+// delete x;
+// return x;
+// })(0);
+// console.log(output);
+
+10) // const IPAddress = 0.232.23.255; //given number should give true for 1.1.1.1
+function validateIp(ip){
+  console.log(typeof ip)
+}
+
+validateIp("1.1.1.1")
+
+11) remove second array elements from first
+let first = [{id:1},{id:2},{id:3},{id:4},{id:5},{id:6}]
+let second = [{id:1},{id:2},{id:3}]
+
+const result = []
+for(obj of first){
+  const c = second.find((sec)=>sec.id===obj.id)
+  if(!c){
+    result.push(obj)
+  }
+}
+
+console.log(result)
+
+
+12) <DynamicFormGenerator FormSchema={FormSchema}/>
+
+
+FormSchema.map((formField))
+=>{
+  
+  return (
+    {formField.type==="text" && (
+     LabeL
+      <Tooltip>
+      <input onChange ={
+        
+      }  /> *
+      </Tooltip>
+      
+      {errors[formField.name]?.length }
+      )
+    
+    )
+
+}
+how do you manage input validation for each field 
+
+
+13) if you have two divs , how do you set size of second div based on first div using css
+<div className="App">
+      <div className="div1">
+        <p>fefefefefef</p>
+      </div>
+      <div className="div2"></div>
+    </div>
+
+14) what is block, inline block,inline
+
+15) what are the advantages of scss over css 
+
+
+
+
+

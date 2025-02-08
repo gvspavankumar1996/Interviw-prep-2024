@@ -60,3 +60,9 @@ var obj2 = {
 // var clonedObj = JSON.parse(JSON.stringify(obj2));
 // clonedObj.a=3;
 // clonedObj.b.c.e=3;
+
+
+
+// JSON, react, redux
+
+

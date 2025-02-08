@@ -1,0 +1,5 @@
+general discussion
+
+1) what is the complex feature or contribution I have done>
+
+2) Any third party intergrations done in my project

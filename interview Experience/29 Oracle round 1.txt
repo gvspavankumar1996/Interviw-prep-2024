@@ -1,0 +1,97 @@
+// Given a string columnTitle that represents the column title as appears in an Excel sheet, return its corresponding column number.
+
+// For example:
+
+// A -> 1
+
+// B -> 2
+
+// C -> 3
+
+// ...
+
+// Z -> 26
+
+// AA -> 27
+
+// AB -> 28 
+
+// ...
+https://leetcode.com/problems/excel-sheet-column-number/description/
+ 
+
+// Example 1:
+
+// Input: columnTitle = "A"
+
+// Output: 1
+
+// Example 2:
+
+// Input: columnTitle = "AB"
+
+// Output: 28
+
+// Example 3:
+
+// Input: columnTitle = "ZY"
+
+// Output: 701
+
+-----------------------------------------------------------------
+
+const alphbets = {
+  A:1,
+  B:2,
+  C:3,
+  D:4,
+  
+  Y:25,
+  Z:26,
+}
+
+
+function getColumnNumber(columnName){
+  if(!columnName){
+    return "Not a valid input"
+  }
+  
+ if(columnName && columnName?.length===1){
+    return alphbets[columnName]
+  }
+  
+  const numberToBeadded = alphbets[columnName[columnName.length-1]]
+  let result = 0;
+  for(let i=columnName.length-2;i>=0;i--){
+    const calculatePosibilities = alphbets[columnName[i]]*26;
+    result= result+calculatePosibilities;
+  }
+  
+  return result+numberToBeadded
+
+}
+
+console.log(getColumnNumber("ZZZ")) // 18278
+console.log(getColumnNumber("ZY")) // 18278
+
+// console.log((26*26)+26)
+console.log((2))
+
+// console.log(((26*26)+(26*26))+26 )
+// console.log(((26*26))+25)
+// console.log(((3*26))+1)
+// console.log(((1*26))+1)
+
+
+
+// {
+// A:1 ,
+// c:3
+// ...
+// Z:26
+  
+// }
+
+
+
+

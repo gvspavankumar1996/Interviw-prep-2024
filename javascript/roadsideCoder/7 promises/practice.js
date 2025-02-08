@@ -1,18 +1,18 @@
-function importantAction(username, cb) {
+function importantAction(username) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(`Subscribe to ${username}`);
     }, 0);
   });
 }
-function likeTheVideo(video, cb) {
+function likeTheVideo(video) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(`Like the ${video} video`);
     }, 0);
   });
 }
-function shareTheVideo(share, cb) {
+function shareTheVideo(share) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       reject(`share the ${share} video`);

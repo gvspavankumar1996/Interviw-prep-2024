@@ -1,0 +1,6 @@
+1) If I have a card component I need to show different designations of a employee(name of role, designation) how would I design it?
+
+2) If I have  table which shows financials of the company and each row is a type of data and on click need to show a bar graph, showing the representation of that financial data.
+
+3) how would I design a dynamic nested tabs which render different UI and how to efficiently update the formdata of that UI , how would you design this?
+

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const Post = ({ data, setPageNo }) => {
+const Post = ({ data, setPageNo, loading }) => {
   useEffect(() => {
     const lastImage = document.querySelector(".img-post:last-child");
     const observer = new IntersectionObserver((param) => {
@@ -22,6 +22,7 @@ const Post = ({ data, setPageNo }) => {
           <img className="img-post" key={image?.id} src={image?.download_url} />
         );
       })}
+      {loading && <div>Loading....</div>}
     </div>
   );
 };

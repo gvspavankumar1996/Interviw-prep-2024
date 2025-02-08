@@ -1,0 +1,32 @@
+1) what is critical css and how it improved performance
+2) what is react router
+3) what is JSX
+4) what is React Fiber architechture
+5) Git stash
+6) How to see git histore of a commits
+7) Acid in DB
+
+Assignment
+Mini Project: Micro Frontend Dashboard using Single-SPA and React
+Project Overview
+Create a Micro Frontend Dashboard using Single-SPA and React. This dashboard will
+have two independent micro frontend applications:
+1. Home App – Displays a welcome message and user details.
+2. Profile App – Shows user profile details.
+These micro frontends will be registered and orchestrated using Single-SPA.
+
+Steps to Complete the Project
+ Create a README file explaining the steps to execute the project.
+ Publish your project in a public Git repository. The repository needs to contain
+your name for easy identification.
+ Reply to the same email in which you received the project with the Git link to
+access your repository
+ The project delivery deadline is 7 days from the email date.
+
+Bonus Enhancements
+✅ Add React Router for navigation between micro frontends.
+✅ Implement Styled Components or Tailwind CSS for better UI.
+✅ Use a global state management tool like Redux or Zustand.
+
+References
+ Single-spa: https://single-spa.js.org/
