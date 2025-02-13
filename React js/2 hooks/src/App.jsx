@@ -9,15 +9,18 @@ import UseImperativeHandle from "./components/6UseImperativeHandle";
 import Counter from "./components/7CountercustomComponent";
 import UseWindowSizeComponent from "./components/8UseWindowSize";
 import UseFetchComponent from "./components/9useFetch";
-import ShoppingCart from "./components/11_ecommerceCart";
+// import ShoppingCart from "./components/11_ecommerceCart";
 import TypeAhead from "./components/12_typeahead";
 import InfiniteScrolling from "./components/13_infiniteScrolling";
 import Carouselfeature from "./components/14_carousel";
+import ThrottleScroll from "./components/15_throttle_scroll";
+import "bootstrap/dist/css/bootstrap.min.css";
+import AutoTypeahedComponent from "./components/16_NamDev_AutoTypeHead";
 // import Counter from './components/Counter'
 
 const App = () => {
   return (
-    <div className="container">
+    <div>
       {/* useEffect polyfill */}
       {/* <Counter/> */}
 
@@ -41,7 +44,10 @@ const App = () => {
       {/* <ShoppingCart /> */}
       {/* <TypeAhead /> */}
       {/* <InfiniteScrolling /> */}
-      <Carouselfeature />
+      {/* <Carouselfeature /> */}
+
+      {/* <ThrottleScroll /> */}
+      <AutoTypeahedComponent />
     </div>
   );
 };

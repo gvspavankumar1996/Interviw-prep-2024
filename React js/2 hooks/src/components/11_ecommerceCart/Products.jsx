@@ -11,7 +11,7 @@ const Products = ({ state, dispatch }) => {
         width: "80%",
       }}
     >
-      {products &&
+      {/* {products &&
         products?.map((prod) => {
           return (
             <div
@@ -37,7 +37,7 @@ const Products = ({ state, dispatch }) => {
               </div>
             </div>
           );
-        })}
+        })} */}
     </div>
   );
 };

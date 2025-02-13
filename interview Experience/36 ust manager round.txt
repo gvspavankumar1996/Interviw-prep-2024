@@ -1,0 +1,5 @@
+1) complex feature you have worked on
+2) how will you implement a carousel
+3) learn about internalization where in Arabic also layout changes , as Arabic is read from right to left
+4) what is sprint
+5) 
