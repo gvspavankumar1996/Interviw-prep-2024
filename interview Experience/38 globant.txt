@@ -1,0 +1,163 @@
+1) observable vs promise in js
+2) local storage vs session vs cookies
+3) HTML 5 features
+4) Undefined type
+
+
+JWT is important
+
+Data types
+deep copy and shallow copy
+ways to create object
+hoisting
+closure
+es6 
+rest and spread
+call apply and bind
+promise and observable
+event loop
+
+
+features of html5
+sematic tags
+local storage , session storage and cookies
+block and inline block
+postion properties
+box modal
+flex layout
+responsive ness
+metatag
+
+
+Virtual dom
+redux
+perofrmance  - lazy loading, content layout shifting, dunacmic na, use memo , use callback
+api 
+
+
+
+
+
+
+
+const a ={name:"pavan",
+
+}
+
+var a= ""
+
+const obj = new Object()
+const b ={...a}
+
+structuredClone()
+Loadash
+write own function
+
+string,number,object,null
+
+
+function sayHi() {
+  console.log(name);
+  console.log(age);
+  var name = 'Lydia';
+  let age = 21;
+}
+
+sayHi();
+
+---------------
+
+
+
+
+
+-------------------------
+let c = { greeting: 'Hey!' };
+let d;
+
+d = c;
+c.greeting = 'Hello';
+console.log(d.greeting);
+
+------------------------
+
+
+let a = 3;
+let b = new Number(3);
+let c = 3;
+
+console.log(a == b);
+console.log(a === b);
+console.log(b === c);
+-------------------
+const a = {name:"pavan",age:"20"}
+const b = {...a, age:30}
+
+function hello (a,b,...remainingparams){
+
+}
+hello(1,2,3,4,5)
+
+
+
+------------------
+
+
+const a = {
+};
+const b = { key: 'b' };
+const c = { key: 'c' };
+
+a[b] = 123;
+a[c] = 456;
+
+console.log(a[b]);
+------------------------
+1) implicit, explicit
+
+function hi(){
+console.log(this)
+}
+
+hi.call(a,12)
+hi.apply(a,[1,2,3])
+const h =hi.bind(a)
+h(1,23,23)
+
+---------------------------------
+
+console.log("Start");
+
+new Promise((resolve, reject) => {
+  console.log("Promise 1");
+  resolve("Resolved 1");
+})
+  .then(res => {
+    console.log(res);
+    return "Resolved 2";
+  })
+  .then(res => {
+    console.log(res);
+  });
+
+console.log("End");
+
+--------------------------------------------
+<div class="box">Test</div>
+
+.box {
+  background-color: blue;
+}
+
+@media (max-width: 600px) {
+  .box {
+    background-color: red;
+  }
+}
+
+@media (min-width: 400px) {
+  .box {
+    background-color: green;
+  }
+}
+----------------------------------

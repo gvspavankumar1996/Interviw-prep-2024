@@ -1,0 +1,21 @@
+1) how will you upload a image to any api, conversion to Base64 
+2) weakmap , weakest, object.freeze, object.seal
+3) interfaces, enums, why typescript
+4) difference between object and map
+5) ways of creating map 
+6) polyfill
+7) how to make you wesite work in old browsers
+8) what is microfrontend
+9) web security
+10) how to mock a api
+11) difference between interface and object type in typescript
+12) currying
+
+
+
+
+feedback:-
+1)work on project explaination
+2) unit testing
+3) performance
+4) web security

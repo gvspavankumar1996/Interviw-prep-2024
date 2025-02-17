@@ -1,0 +1,23 @@
+.heading-container {
+  display: flex;
+  /* justify-content: center; */
+  /* gap: 2; */
+}
+
+.heading {
+  padding: 10px 20px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.tab-body {
+  display: flex;
+  border: 1px solid black;
+  height: 200px;
+  padding: 5px;
+}
+
+.active {
+  background-color: gray;
+  color: aliceblue;
+}

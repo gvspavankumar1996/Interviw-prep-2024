@@ -1,0 +1,130 @@
+// total exp: 5.7 yrs
+// web development: 5.3
+// react: 5.3
+// ==================================
+
+
+let o1 = { // value in o1? reference
+	'name': 'Mike',
+}
+
+let o2 = o1 // what is the value in o1? reference to the object
+            // what is the value in o2? reference 
+
+let o3 = o2 
+o1 = o3 // we are assigning the same value? yes
+
+o2.name = 'John'
+
+console.log(o2.name)  // ?   John
+console.log(o1.name)  // ?  John
+
+// count of variables? 2, o1 o2
+// count of objects?  1
+// —----------------------------------
+
+
+let f1 = () =>  {
+    console.log('I am f1')
+}
+
+let f2 = f1
+
+f1() //? I am f1
+f2() //? I am f1
+
+// count of variables? 2
+// count of functions? 1
+
+// --------------------------
+
+// callback
+Array.prototype.myMap = function(cb){
+  let result =[];
+    for(let i=0;i<this.length;i++){
+     result[i] = cb(this[i],i,this) // invoking the callback
+    }
+    return result;
+}
+
+[1,2,3].map((num,i,arr)=>{
+    return num+2
+})
+
+//===============================
+
+const [count, setCount] = getSomething(); // return type of getSomething ? array, destructuring
+
+const [xyz, abc] = getSomething();// no difference
+
+//==========================
+
+
+
+const Student = ({name})=>{ // causes for rerender? prop, state
+
+    const [count, setCount] = useState(0);
+    var obj = {};
+
+    useEffect(()=>{
+        setCount(newCount());
+    },[obj]) // how many parameters are accepted by useEffect/ 2
+             // rerender loop
+
+
+    return (
+        <div onclick={() => setCount(newCount())}>{name}</div>
+    )
+}
+export default Student
+
+
+//===========================
+
+Redux
+
+Global store 
+
+Reduceres 
+
+Action -- set of actions 
+
+
+<Provider store = {store}>
+
+Component  - dispatch an action ==> Action , payload // what is an action? object, with type
+dispatch(action)
+
+Component --     useSelector((state)=> state.cartPage)
+
+//====================
+
+nextjs -> good seo? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
