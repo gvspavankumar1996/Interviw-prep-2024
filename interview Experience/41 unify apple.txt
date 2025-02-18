@@ -1,0 +1,141 @@
+1) 
+Hoc Component, write withAuth
+
+--------------------------------------------
+
+const obj = {
+    a: 10,
+    b: 20,
+    c: 5,
+    d: 20,
+    e: 10
+}
+
+// const largestNumber=0;
+let largestKeyValue = null;
+let largestValue=0;
+
+for(key in obj){
+  if(obj[key]>largestValue){
+    largestValue= obj[key];
+    largestKeyValue=key;
+  }
+}
+
+console.log(largestKeyValue)
+---------------------------------------
+
+var foo = 'foo';
+
+function bar() {
+  setTimeout(() => {
+    console.log(foo); // "foo" 6
+  }, 0);
+  console.log(foo); // undefined  1
+  console.log(bar()); // undefined 2
+  console.log(foo); // "bartwo"  3
+  
+  var foo = 'bar';
+  function bar() {
+    foo = 'bartwo';
+  }
+  console.log(foo); // "bartwo" 4
+}
+
+bar();
+console.log(foo); //"foo" 5
+---------------------------------------
+const sum = function(a){
+  return function(b){
+    if(b) return sum(a+b);
+    return a;
+  }
+}
+
+console.log(sum(1)(2)(3)()); // 6
+console.log(sum(1)(2)(3)(4)()); // 10
+
+---------------------------------------
+const arr1=
+[{
+  "role": "manager",
+  "teams": ["team1"],
+  "users": ["user1","user2"]
+ },
+ {
+  "role": "supervisor",
+  "teams": ["supervisor-team"]
+ }
+]
+
+const arr2= 
+[
+ {
+  "role": "manager",
+  "users": ["user3","user4","user2"],
+  "teams": ["team1","team2"]
+ },
+ {
+  "role": "lead",
+  "users": ["lead-user"],
+ }
+]
+
+let obj ={
+  
+}
+
+for(arr of arr2){
+  // if(!obj[arr["role"]]){
+    obj[arr["role"]]= {
+      role:arr["role"],
+      users:arr["users"],
+      teams:arr["teams"]
+    }
+  // }
+}
+
+
+for(arr of arr1){
+  if(!obj[arr["role"]]){
+    obj[arr["role"]]= {
+      role:arr["role"],
+      users:arr["users"],
+      teams:arr["teams"]
+    }
+  }
+  else{
+    const copy = {...obj[arr["role"]]}
+    if(arr["users"]?.length){
+      
+      const newDataUsers = [...new Set([...arr["users"], ...copy["users"]])]
+      const newDataTeams = [...new Set([...arr["teams"], ...copy["teams"]])]
+      obj[arr["role"]].users= [...newDataUsers]
+      obj[arr["role"]].teams= [...newDataTeams]
+    
+    }
+  }
+  
+}
+const finalOutput = []
+for(values in obj){
+  finalOutput.push(obj[values])
+}
+
+console.log(finalOutput)
+
+// [{
+//   "role": "manager",
+//   "users": ["user1”,“user2","user3","user4"],
+//   "teams": ["team1"]
+// },
+// {
+//   "role": "supervisor",
+//   "teams": ["supervisor-team"]
+// },
+// {
+//   "role": "lead",
+//   "users": ["lead-user"],
+// }
+// ] 
+

@@ -1,0 +1,51 @@
+1) Microfrontend
+2) center a div in screen
+3) if a set of routes requires Header and other does not how would you implement
+4) webpack configurations
+5) destructure name from
+let obj = {
+    name: {
+        test: {
+        		name: "Gaurav"
+        },
+        name: 'Sumit',
+    }
+}
+
+
+6) <footer>B</footer>
+<header>A</header>
+order how it will show in dom
+
+5)
+function add(arr) {
+   arr.push(4);
+   console.log(arr);
+}
+
+const arr = [1, 2, 3];
+add(arr);
+console.log(arr);
+6)sort
+ var arr = [
+{
+id: 6,
+name: 'd'
+},
+{
+id: 2,
+name: 'b'
+},
+{
+id: 9,
+name: 'f'
+},
+{
+id: 4,
+name: 'c'
+},
+{
+id: 1,
+name: 'a'
+},
+]
