@@ -1,0 +1,8 @@
+1) design api structure for order history and status [page of a eccommerce
+
+
+Tech stack being used:-
+
+1) BFF backend for froentend
+2) NFE's microfrontend
+

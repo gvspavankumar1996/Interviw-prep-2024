@@ -1,0 +1,4 @@
+write functions to add to cart and how will I store products.
+also the cart page will have list of items whose priority can change ( my solution was dragging and dropping)
+later he asked how if I have multi select and drag drop
+

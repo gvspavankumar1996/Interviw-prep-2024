@@ -1,0 +1,88 @@
+1) 
+// use stack here for better optimization
+const tasks1 = [
+
+  { id: 1 },
+
+  { id: 2, tasks: [{ id: 3 }, { id: 4 }] },
+
+  { id: 5 }
+
+];
+
+// console.log(countTasks(tasks1)); // Output: 5
+
+ 
+
+const tasks2 = [
+
+  { id: 1, tasks: [{ id: 2, tasks: [{ id: 3 }] }] },
+
+  { id: 4 }
+
+];
+
+
+function taskArrayCheck(){
+  
+}
+
+function countTasks(arr){
+  
+  // arr.length
+  let taskCount = 0;
+  let taskStack =[];
+  
+  
+  for(const task of arr){
+    taskCount++;
+    if(Array.isArray(task?.tasks) && task?.tasks?.length>0){
+    // taskCount+= countTasks(task?.tasks)
+    task
+    }
+    
+  }
+  return taskCount;
+  
+}
+
+
+
+
+
+
+// function countTasks(arr){
+//   let taskCount = 0;
+  
+//   for(const task of arr){
+//     taskCount++;
+//     if(Array.isArray(task?.tasks) && task?.tasks?.length>0){
+//     taskCount+= countTasks(task?.tasks)
+//     }
+    
+//   }
+  
+//   return taskCount;
+  
+// }
+console.log(countTasks(tasks1))
+
+------------------------------------------------------------------
+
+2)  design folder structure for public parking lot  and all components that I require
+
+----------------------------------------------------------
+3) Amazon HLD for frontend
+
+----------------------------------------------
+4) JWT   , session storage , cookies
+
+-----------------------------------------
+
+5) Oauth, how to secure data interaction 
+___________________________________________________________
+
+6) where do you store ssl certificate
+
+___________________________________________________________
+

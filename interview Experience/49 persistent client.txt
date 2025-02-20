@@ -1,0 +1,57 @@
+// function deepFlatten(obj : Object,result : Object){
+// const result={}
+// for(let val in obj){
+//         if( typeof obj[val] === "object"){
+//          result.val=deepFlatten(obj[val],result)
+//         }
+//         else{
+//             result.val= obj[val]
+//         }
+//     }
+
+//     return result;
+// }
+
+// const obj = {
+//   a: {
+//     b: {
+//       c: 42,
+//     }, d: 'hello',
+//   },
+// };
+// const flat = deepFlatten(obj,{});
+// console.log(flat)
+
+// Expected output:// { 'a.b.c': 42, 'a.d': 'hello' }
+
+// function memoizedFactorial(fn: Function): any {
+//   const cache = {};
+//   return function (args) {
+//     // console.log(args)
+//     const argumentsReceived = JSON.stringify(args);
+
+//     if (cache[argumentsReceived]) {
+//       console.log("cache");
+//       return cache[argumentsReceived];
+//     } else {
+//       cache[args] = fn(args);
+//       return cache[args];
+//     }
+//   };
+// }
+
+// function factorial(n: number): number {
+//   if (n === 0 || n === 1) return 1;
+//   return n * factorial(n - 1);
+// }
+
+// const callMemoizedFactorial = memoizedFactorial(factorial);
+
+// console.log(callMemoizedFactorial(5), "result1");
+// console.log(callMemoizedFactorial(5), "result2");
+// callMemoizedFactorial(5);
+
+//   console.log(factorial(5)); // 120
+//   console.log(factorial(0)); // 1
+//   console.log(factorial(3)); // 1
+//   console.log(factorial(6)); // 1

@@ -1,0 +1,11 @@
+1) trapped water leetcode
+2) [1,0,3,0,4,0] ==> 134000
+3) how to reverse string and number without inbult function or loop ==> and recursion
+4) can I use multiple html for one html page
+5) what is counter
+6) grid vs flex
+7) rest api vs graphql
+8) why rest required and can't we use FE directly for making changes in DB 
+9)how to print unique values in an array in assending order.
+10)what is recursion
+11)Data flow in redux

@@ -1,0 +1,4 @@
+1) what is optional chaining
+2) is.NAN check this
+3) git rebase , force push to remote , git related scenario based questions
+
